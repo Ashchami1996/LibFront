@@ -1,0 +1,141 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div style="background-color: #eaeaea">
+          <div class="page-header header-filter clear-filtr" data-parallax="true">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                  <div class="brand">
+
+                    <h3> Add Books</h3>
+                    <br>
+                    <br>
+
+                    <div class="col-sm-6">
+                      <div class="card, panel panel-default">
+                        <!--<div class="panel-heading bg-blue">Book Ticket</div>-->
+                        <div class="panel-body">
+                          <div id="RegisterForm">
+                            <div style="background-color: #7f7f7f; width: 350px">
+                              <div style="background-color: #000088">  <h3 style="color: white"> Add new author</h3><br>
+                              </div>
+                            <div id="addAuthor"></div>>
+                              <div class="form-group" >
+                              <label class="lbl">Author Name</label>
+                                <div>
+                              <input type="text" class="form-control" name="Address" style="color: black ;width: 300px"><br>
+  
+                                </div>>
+                              <button class="btn btn-info"  id="Add" (click)="saveAuthor()">Add Author</button>
+                            </div>
+                              </div>
+
+                            <div class="form-group" >
+                              <label class="lbl">Book Name</label>
+                              <input type="text" class="form-control" name="name"style="color: black;width: 300px"
+                                    >
+                            </div>
+                            <div class="form-group" >
+                              <label class="lbl">Catagory</label>
+                              <input type="text" class="form-control" name="password "
+                                     style="color: black;width: 300px">
+                            </div>
+                            <div>
+                              <label >pages</label>
+                              <input type="text" name="DOB" max="3000-12-31" min="1000-01-01" class="form-control"
+                                     style="color:black;width: 300px">
+                            </div>
+                            <div>
+                              <label >status</label>
+                              <input type="text" name="DOB" max="3000-12-31" min="1000-01-01" class="form-control"
+                                     style="color:black;width: 300px">
+                            </div>
+                            <div class="form-group" >
+                              <label class="lbl">Rack No</label>
+                              <input type="text" class="form-control" name="Tp" style="color: black ;width: 300px"
+                                     >
+                            </div>
+
+                            <label class="lbl">Author</label>
+                            <select id="CityCombo1" class="styleSelect"
+                                    style="width: 100%" name="City" style="color: black; width: 300px"
+                                  >
+                              <option value="">select...</option>
+                              <option > {{author.authorId}}</option>
+                            </select>
+
+                          </div>>
+                          <hr>
+                          <div class="button">
+                            <button class="btn btn-info"  id="AddRegisterBtn"
+                                    (click)="saveBook()">Save</button>&nbsp;
+                            <button class="btn btn-secondary">Update</button>&nbsp;
+                            <button class="btn btn-danger">Delete</button>&nbsp;
+                            <!--<button class="btn btn-success">Search</button>&nbsp;-->
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <img src="../../../assets/ddddd.jpg">
+        <!--<img src="../../../assets/cccccccccccc.jpg">-->
+        <br>
+        <div class="col-12"><table class="table">
+          <thead class="border-light">
+          <tr>
+            <!--<th scope="col">#</th>-->
+            <th scope="col">book Id</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Catagory</th>
+            <th scope="col">page</th>
+            <th scope="col">Rack No</th>
+            <th scope="col"> Status</th>
+            <th scope="col">Author</th>
+
+
+            <!--<th scope="col">Action </th> -->
+          </tr>
+          </thead>
+          <tbody id="flightBody" >
+          <tr *ngFor="let book of books" (click)="tableClick(book)" >
+            <td>{{book.bid}}</td>
+            <td>{{book.bookName}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.pages}}</td>
+            <td>{{book.status}}</td>
+            <td>{{book.authorId}}</td>
+            <td>
+              <i (click)="deleteStudent(book.bid)" class="fa fa-trash fa-2x">
+                <img src="../../../assets/icons8_Cancel_25px.png"></i>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

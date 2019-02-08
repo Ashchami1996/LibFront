@@ -1,0 +1,129 @@
+<form [formGroup]="studentForm" >
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div style="background-color: #eaeaea">
+          <div class="page-header header-filter clear-filtr" data-parallax="true">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                  <div class="brand">
+
+                    <h3> Student Registration</h3>
+                    <br>
+                    <br>
+
+                    <div class="col-sm-6">
+                      <div class="card, panel panel-default">
+                        <!--<div class="panel-heading bg-blue">Book Ticket</div>-->
+                        <div class="panel-body">
+                          
+
+                            
+
+                              <label class="lbl">Registration ID</label>
+                              <input type="text" formControlName="rid"
+                               class="form-control" name="Address" style="color: black ;width: 300px">
+
+                            
+
+                           
+                              <label class="lbl">FullName</label>
+                              <input type="text" formControlName="fullname" class="form-control" name="name" style="color: black;width: 300px"
+                                     >
+                            
+                           
+                              <label class="lbl">Address</label>
+                              <input type="text" formControlName="Address" class="form-control" name="password " style="color: black;width: 300px"
+                                     >
+                            
+                            
+                              <label >Date of Birth</label>
+                              <input formControlName="DOB" type="date" name="DOB" max="3000-12-31" min="1000-01-01" class="form-control"
+                                     style="color:black;width: 300px" >
+                            
+                            
+                              <label class="lbl">Grade</label>
+                              <input type="text" formControlName="Grade" class="form-control" name="Tp" style="color: black ;width: 300px"
+                                    >
+                            
+                            
+                              <label class="lbl">Password</label>
+
+                              <input type="text" formControlName="password" class="form-control" name="email" style="color: black;width: 300px"
+                                    >
+                            
+
+                          
+                          <hr>
+                          
+                          
+                            <button class="btn btn-info" (click) = "save()" id="AddRegisterBtn">Register</button>&nbsp;
+                            <button class="btn btn-secondary" >Update</button>&nbsp;
+                            <button class="btn btn-success" >Search</button>&nbsp;
+                          
+                       
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <img src="../../../assets/bbbbb.jpg">
+        <img src="../../../assets/cccccccccccc.jpg">
+        <br>
+        <div class="col-12">
+          <table class="table" class="table table-bordered table-hover">
+          <thead class="border-light">
+          <tr>
+            <!--<th scope="col">#</th>-->
+            <th scope="col">Reg ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Birth Day</th>
+            <th scope="col">Password</th>
+            <th scope="col">Grade</th>
+            <th> </th>
+
+            <!--<th scope="col">Action </th> -->
+          </tr>
+          </thead>
+          <tbody id="flightBody" >
+          <tr >
+            <td>{{student.regId}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.address}}</td>
+            <td>{{student.bday}}</td>
+            <td>{{student.password}}</td>
+            <td>{{student.grade}}</td>
+            <td>
+              <i  class="fa fa-trash fa-2x">
+                <img src="../../../assets/icons8_Cancel_25px.png"></i>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
